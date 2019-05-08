@@ -1,12 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder - Take the Survey</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/survey.css">
 </head>
+
 <body>
-    
+    <header>
+        Survey Questions
+        <hr>
+    </header>
+    <main>
+        <div>
+            <div class="aboutYou">About You</div>
+            <label>Name (required)</label>
+            <br>
+            <input type="text" id="name">
+            <br>
+            <label>Link to Photo (required)</label>
+            <br>
+            <input type="text" id="photo">
+            <br>
+            <hr class="about">
+        </div>
+        <div>
+            <div class="questions">Question #1</div>
+            <label>It's understandable to get rid of your cat when you move.</label>
+            <br>
+            <select id="q1">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option>5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #2</div>
+            <label>You would be willing to miss an important family event to watch a playoff game on TV.</label>
+            <br>
+            <select id="q2">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value3>3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #3</div>
+            <label>You are surprised when someone says they don't have a passport.</label>
+            <br>
+            <select id="q3">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #4</div>
+            <label>You don't really see the point of making the bed.</label>
+            <br>
+            <select id="q4">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #5</div>
+            <label>Sean Hannity is one of the great Americans of our time.</label>
+            <br>
+            <select id="q5">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #6</div>
+            <label>Baseball is better than basketball.</label>
+            <br>
+            <select id="q6">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #7</div>
+            <label>Wine improves nearly any situation.</label>
+            <br>
+            <select id="q7">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #8</div>
+            <label>"Dallas" is on your Top 10 list of all-time favorite TV shows.</label>
+            <br>
+            <select id="q8">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #9</div>
+            <label>Going on a long hike is a great way to spend a Sunday.</label>
+            <br>
+            <select id="q9">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div>
+            <div class="questions">Question #10</div>
+            <label>The dog and cat sleep on the bed. And? What's wrong with that?</label>
+            <br>
+            <select id="q10">
+                <option value="default" selected disabled>Select an Option</option>
+                <option value="1">1 (strongly disasgree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+            </select>
+        </div>
+        <div id="submit">
+            <button id="submitBtn">Submit</button>
+        </div>
+        <div id="menu">
+            <a href="./home.html">Home |</a>
+            <a href="">API Friends List |</a>
+            <a href="https://github.com/mbmedhurst/FriendFinder.git">Github Repo</a>
+        </div>
+    </main>
+
 </body>
+
 </html>

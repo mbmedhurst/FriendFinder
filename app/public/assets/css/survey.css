@@ -1,0 +1,64 @@
+body {
+    background-image: url(../images/cork_1.png);
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 2em;
+}
+
+header {
+    margin: 50px 50px 20px 50px ;
+    font-size: 35px;
+}
+
+main {
+    margin: 50px;
+}
+
+.aboutYou {
+    font-size: 25px;
+    font-weight: bold;
+    margin: -30px 0 10px 0px;
+}
+
+label {
+    font-size: 20px;
+    padding-top: 10px;
+
+}
+
+input {
+    font-size: 18px;
+    height: 30px;
+    width: 300px;
+}
+
+.about {
+    margin: 15px 0px 15px 0px;
+}
+
+.questions {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0 10px 0px;
+}
+
+select {
+    font-size: 15px;
+}
+
+#submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submitBtn {
+    margin: 30px auto 20px auto;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    width: 500px;
+}
+
+#menu {
+    margin-top: 20px;
+}
