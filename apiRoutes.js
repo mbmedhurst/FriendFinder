@@ -1,3 +1,5 @@
+const friends = require('../data')
+
 module.exports = app => {
 
     // post new friend
