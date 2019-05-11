@@ -9,13 +9,15 @@ document.querySelector('#submitBtn').addEventListener('click', e => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            name: document.querySelector('#name'),
-            photo: document.querySelector('#photo'),
-            scores: [`${q1.value}`]
+            name: document.querySelector('#name').value,
+            photo: document.querySelector('#photo').value,
+            scores: [`${q1.value}`, `${q2.value}`, `${q3.value}`]
         })
+        
     })
         .then(r => {
-            alert('Friend Added')
+            console.log('Friend Added')
+            
         })
         .catch(e => console.error(e))
 })
