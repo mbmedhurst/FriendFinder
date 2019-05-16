@@ -4,13 +4,17 @@ const friends = require("../data")
 
 module.exports = app => {
     let compare = newFriend => {
+        // object to hold the eventual match
+        let match = {
+            name: '',
+            photo: '',
+            lowScore: 40
+        }
         // converts newfriend scores from string to integer
         let newFriendScores = newFriend.scores.map(num => parseInt(num));
         console.log(newFriendScores);
         // method to calculate differences between two values
         let difference = (a, b) => { return Math.abs(a - b) }
-        // set a fixed low score to compare to
-        let lowScore = 40
         // loop to go through each of the existing friends in the data list
         for (i = 0; i < friends.length; i++) {
             // array to hold values for any differences between two arrays
@@ -29,14 +33,17 @@ module.exports = app => {
             })
             // compare each sum to the default low score
             // if sum is lower, then sum becomes the new low score
-            if (sum < lowScore) {
-                lowScore = sum
+            if (sum < match.lowScore) {
+                match.lowScore = sum
+                match.name = friends[i].name
+                match.photo = friends[i].photo
+                console.log(match.name)
             }
 
-            console.log(friends[i].name)
-            console.log(diffArr)
-            console.log(sum)
-            console.log(lowScore)
+            console.log(`Your closest match is ${match.name} with a score of ${match.lowScore}.`)
+            // console.log(diffArr)
+            // console.log(sum)
+            // console.log(lowScore)
         }
     }
 
@@ -50,6 +57,8 @@ module.exports = app => {
         compare(newFriend);
         // once comparison is done the new friend is pushed to the old friends array
         friends.push(newFriend)
+        // friend match is displayed on survey page
+        
     })
 
     // get request for all friends
