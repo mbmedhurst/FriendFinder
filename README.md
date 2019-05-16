@@ -7,6 +7,5 @@ A tool to help match like-minded people looking to make new friends.
 - See who your closest match is!
 
 ## Incomplete Areas
-- I am able to calculate the closest match between the newly submitted survey and those contained in the data list.
-- I have not been able to pull the **name** of the person in the data list who is the closest match to the newly submitted survey
-- I am also not clear on how to return the information to the client once it has been found on the server side.
+- If you look in the console, you can see your closest match after submitting your survey
+- I am still trying to get the modal to work

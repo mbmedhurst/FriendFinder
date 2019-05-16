@@ -39,7 +39,7 @@ module.exports = app => {
                 match.photo = friends[i].photo
                 console.log(match.name)
             }
-
+            return match
             console.log(`Your closest match is ${match.name} with a score of ${match.lowScore}.`)
             // console.log(diffArr)
             // console.log(sum)
@@ -51,14 +51,12 @@ module.exports = app => {
     app.post("/friends", (req, res) => {
         let newFriend = req.body;
         newFriend.id = friends.length + 1;
-        //Test to see if new one is added
-        res.send(newFriend);
         // call function to trigger comparison
-        compare(newFriend);
+        let newMatch = compare(newFriend);
         // once comparison is done the new friend is pushed to the old friends array
         friends.push(newFriend)
         // friend match is displayed on survey page
-        
+        return res.send(newMatch)
     })
 
     // get request for all friends
