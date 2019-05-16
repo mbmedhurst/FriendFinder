@@ -28,7 +28,6 @@ document.querySelector('#submitBtn').addEventListener('click', e => {
     })
         .then(r => r.json())
         .then(r => {
-            console.log(r.name)
             console.log(`Your closest match is ${r.name} with a low score of ${r.lowScore}.`)
         })
         .catch(e => console.error(e))
